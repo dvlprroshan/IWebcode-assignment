@@ -1,0 +1,20 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(223, 246, 250);
+  display: grid;
+
+  place-items: center;
+}
+
+.showBtn {
+  background: linear-gradient(to right, #ff9966 0%, #ff5e62 100%);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}

@@ -1,0 +1,200 @@
+@use "../utils/variables.scss" as var;
+
+.root_com {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: #00000044;
+  width: 100%;
+}
+
+.inner_con {
+  background: white;
+  width: min(100%, 500px);
+  height: min(100%, 600px);
+  border-radius: var.$border_radius + 3px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    background: transparent;
+
+    max-height: 50%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(201, 198, 198);
+    max-height: 100px !important;
+    // border-radius: var.$border_radius;
+  }
+}
+
+.m_title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background: white;
+  // position: sticky;
+}
+
+.mi_title {
+  color: var.$color_black;
+}
+.mi_closebtn {
+  svg path {
+    stroke: gray;
+  }
+}
+
+// currency toggler
+.curr_toggler {
+  display: flex;
+  justify-content: right;
+  //   margin-bottom: 10px;
+}
+.ct_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  column-gap: 10px;
+  color: gray;
+  font-weight: bold;
+}
+.ct_switch {
+  transform: scale(0.55);
+  margin-right: -10px;
+}
+.ctl_icon {
+  background-color: rgb(57, 204, 57);
+  border-radius: 50%;
+  padding: 1px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  transform: scale(0.8);
+  place-items: center;
+  svg {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.fi_input {
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: var.$border_radius;
+    border: 2px solid rgb(233, 230, 230);
+    padding: 0 10px;
+    background-color: #f0f0f075;
+    font-size: 22px;
+    text-align: right;
+    font-family: "Roboto", sans-serif;
+    // color: var.$color_black;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.sid {
+  color: rgb(165, 164, 164);
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+  right: 10px;
+}
+
+.sid_main {
+  display: flex;
+  margin-top: 5px;
+  //   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 5px;
+  > div {
+    // margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: var.$border_radius + 5px;
+    font-weight: bold;
+    background: rgb(238, 238, 238);
+  }
+}
+
+.tf_title {
+  margin-top: 15px;
+  color: var.$color_black;
+}
+.timeframe {
+  display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  column-gap: 5px;
+  flex-wrap: wrap;
+  > div {
+    padding: 10px 20px;
+    border-radius: var.$border_radius + 15px;
+    font-weight: bold;
+    background: rgb(238, 238, 238);
+    cursor: pointer;
+  }
+  // > div:first-child {
+  // }
+  .activeCircle {
+    color: white;
+    background: rgb(248, 213, 117);
+    border: 2px solid rgb(241, 203, 95);
+  }
+}
+.cr_topdesc {
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: rgb(167, 164, 164);
+}
+
+.hd_toggler {
+  text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.apy_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.apy_title_per {
+  color: rgb(255, 231, 97);
+  font-size: 18px;
+}
+
+.apy_list {
+  > div {
+    color: gray;
+    display: list-item;
+    margin-left: 20px;
+    // &::before {
+    //   content: "";
+    //   width: 8px;
+    //   height: 8px;
+    //   background: rgb(196, 196, 196);
+    //   border-radius: 50%;
+    //   display: inline-block;
+    //   margin-right: 10px;
+    // }
+  }
+}
